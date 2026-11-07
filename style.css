@@ -1,0 +1,402 @@
+/* =========================================================
+   COLOR SETTINGS
+   ========================================================= */
+:root {
+    --bg: #fff5f8;          /* page background */
+    --card: #ffffff;        /* card / box background */
+    --pink: #f8a5c2;        /* (buttons, accents) */
+    --pink-dark: #e77fa5;   /* (hover, highlights) */
+    --pink-light: #ffe4ec;  /* (borders, small labels) */
+    --text: #4a3b40;        /* main text color */
+    --text-light: #8c7a80;  /* lighter text for descriptions */
+}
+
+/* Dark mode colors */
+body.dark-mode {
+    --bg: #2b1f24;
+    --card: #3a2a31;
+    --pink-light: #4d3540;
+    --text: #fbe9ef;
+    --text-light: #d6bcc6;
+}
+
+/* =========================================================
+   BASE RESET
+   ========================================================= */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+/* =========================================================
+   BASE STYLES
+   ========================================================= */
+body {
+    background-color: var(--bg);
+    color: var(--text);
+    line-height: 1.6;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+h2 {
+    font-size: 2rem;
+    color: var(--pink-dark);
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+h3 {
+    margin-bottom: 0.3rem;
+}
+
+section {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 5rem 1.5rem;
+}
+
+.section-text {
+    text-align: center;
+    color: var(--text-light);
+    max-width: 650px;
+    margin: 0 auto 2rem;
+}
+
+/* =========================================================
+   HEADER / NAVIGATION
+   ========================================================= */
+header {
+    position: sticky;      
+    top: 0;
+    background-color: var(--card);
+    box-shadow: 0 2px 10px rgba(248, 165, 194, 0.3);
+    z-index: 10;           
+}
+
+header nav {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 1rem 1.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: var(--pink-dark);
+}
+
+.nav-links {
+    display: flex;
+    gap: 1.5rem;
+    list-style: none;   
+}
+
+.nav-links a:hover {
+    color: var(--pink-dark);
+}
+
+/* =========================================================
+   BUTTONS
+   ========================================================= */
+button,
+.btn {
+    display: inline-block;
+    padding: 0.6rem 1.2rem;
+    background-color: var(--pink);
+    color: #ffffff;
+    border: none;
+    border-radius: 25px;   /* rounded pill shape */
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+}
+
+button:hover,
+.btn:hover {
+    background-color: var(--pink-dark);
+}
+
+/* Outline button (white with pink border) */
+.btn-outline {
+    background-color: transparent;
+    color: var(--pink-dark);
+    border: 2px solid var(--pink);
+}
+
+.btn-outline:hover {
+    color: #ffffff;
+}
+
+/* =========================================================
+   HERO (TOP PART)
+   ========================================================= */
+#hero {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2rem;
+    min-height: 85vh;  
+}
+
+.small-label {
+    display: inline-block;
+    background-color: var(--pink-light);
+    color: var(--pink-dark);
+    padding: 0.3rem 1rem;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    margin-bottom: 1rem;
+}
+
+#hero h1 {
+    font-size: 3rem;
+    line-height: 1.2;
+    margin-bottom: 1rem;
+}
+
+.highlight {
+    color: var(--pink-dark);
+}
+
+.hero-text p {
+    color: var(--text-light);
+}
+
+.hero-buttons {
+    margin-top: 1.5rem;
+    display: flex;
+    gap: 1rem;
+}
+
+.profile-pic {
+    width: 280px;
+    height: 280px;
+    border-radius: 50%;       
+    object-fit: cover;
+    border: 8px solid var(--pink-light);
+    flex-shrink: 0;           
+}
+
+/* =========================================================
+   CARDS (used in About, Skills, Education, Contact)
+   ========================================================= */
+.card-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);   
+    gap: 1.2rem;
+}
+
+.card-grid.three {
+    grid-template-columns: repeat(3, 1fr);  
+}
+
+.card-grid.two {
+    grid-template-columns: repeat(2, 1fr);   
+}
+
+.card {
+    background-color: var(--card);
+    padding: 1.5rem;
+    border-radius: 15px;
+    border: 2px solid var(--pink-light);
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    border-color: var(--pink);
+}
+
+.card h3 {
+    color: var(--pink-dark);
+}
+
+.card p {
+    color: var(--text-light);
+}
+
+.hide {
+    display: none;
+}
+
+/* =========================================================
+   SKILL FILTER BUTTONS
+   ========================================================= */
+.filter-buttons {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 0.6rem;
+    margin-bottom: 2rem;
+}
+
+.filter-btn {
+    background-color: var(--pink-light);
+    color: var(--pink-dark);
+}
+
+.filter-btn.active {
+    background-color: var(--pink);
+    color: #ffffff;
+}
+
+/* =========================================================
+   EXPERIENCE 
+   ========================================================= */
+.timeline {
+    border-left: 3px solid var(--pink);   
+    padding-left: 1.5rem;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.timeline-item {
+    background-color: var(--card);
+    padding: 1.2rem;
+    border-radius: 12px;
+    margin-bottom: 1.2rem;
+    border: 2px solid var(--pink-light);
+}
+
+.timeline-item p {
+    color: var(--text-light);
+}
+
+.date {
+    color: var(--pink-dark);
+    font-weight: bold;
+    font-size: 0.9rem;
+}
+
+/* =========================================================
+   EDUCATION HONORS
+   ========================================================= */
+.sub-title {
+    text-align: center;
+    margin-top: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.honors {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 0.8rem;
+}
+
+.honors li {
+    background-color: var(--pink-light);
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+}
+
+/* =========================================================
+   CONTACT
+   ========================================================= */
+.contact-card {
+       cursor: pointer;   
+   }
+
+#contact-btn {
+    display: block;
+    margin: 2rem auto 0;   
+}
+
+
+#toast {
+    position: fixed;
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: var(--pink-dark);
+    color: #ffffff;
+    padding: 0.7rem 1.5rem;
+    border-radius: 25px;
+    opacity: 0;              
+    transition: opacity 0.3s ease;
+}
+
+#toast.show {
+    opacity: 1;
+}
+
+/* =========================================================
+   FOOTER
+   ========================================================= */
+footer {
+    text-align: center;
+    padding: 1.5rem;
+    background-color: var(--pink-light);
+    color: var(--text-light);
+}
+
+/* =========================================================
+   CHERRY BLOSSOM PETALS
+   ========================================================= */
+.petal {
+    position: fixed;            
+    top: -20px;                 
+    background-color: #ffc0d3;  /* petal color */
+    border-radius: 100% 0;      
+    opacity: 0.8;
+    pointer-events: none;       
+    z-index: -1;               
+    animation: fall linear forwards;
+}
+
+
+@keyframes fall {
+    to {
+        transform: translate(100px, 110vh) rotate(360deg);
+    }
+}
+
+/* =========================================================
+   MOBILE VIEW (screens smaller than 768px)
+   ========================================================= */
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;  
+    }
+
+    #hero {
+        flex-direction: column-reverse;   
+        text-align: center;
+        padding-top: 3rem;
+    }
+
+    #hero h1 {
+        font-size: 2.2rem;
+    }
+
+    .hero-buttons {
+        justify-content: center;
+    }
+
+    .profile-pic {
+        width: 200px;
+        height: 200px;
+    }
+
+    .card-grid,
+    .card-grid.three,
+    .card-grid.two {
+        grid-template-columns: 1fr;
+    }
+}

@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nickey Juzmine Kasugai | E-Portfolio</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <script src="script.js" defer></script>
+</head>
+<body>
+
+    <!-- ===================== HEADER / NAVIGATION ===================== -->
+    <header>
+        <nav>
+
+            <a href="#hero" class="logo">NK.tech 🌸</a>
+
+            <ul class="nav-links">
+                <li><a href="#about">About</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#experience">Experience</a></li>
+                <li><a href="#education">Education</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+
+            <button id="theme-btn">🌙</button>
+        </nav>
+    </header>
+
+    <main>
+
+        <!-- ===================== HERO (TOP PART) ===================== -->
+        <section id="hero">
+            <div class="hero-text">
+                <p class="small-label">Welcome to my Portfolio!</p>
+                <h1>Hi, I'm <span class="highlight">Nickey Juzmine Kasugai</span></h1>
+                <p>1st Year Computer Science Student focused on Web Development, Multimedia Design, and Programming.</p>
+
+                <div class="hero-buttons">
+                    <a href="#contact" class="btn">Get In Touch</a>
+                    <a href="#experience" class="btn btn-outline">View Experience</a>
+                </div>
+            </div>
+
+            <!-- Profile photo-->
+            <img src="assets/me2.png" alt="Profile Photo" class="profile-pic">
+        </section>
+
+        <!-- ===================== ABOUT ===================== -->
+        <section id="about">
+            <h2>About Me</h2>
+            <p class="section-text">
+                I am a 1st Year Computer Science student at the University of the Immaculate Conception who loves learning new things. I enjoy building websites,
+                designing graphics, and solving problems with code. I always aim to improve
+                myself one project at a time.
+            </p>
+
+            <div class="card-grid three">
+                <div class="card">
+                    <h3>Specialization</h3>
+                    <p>Graphic Design</p>
+                </div>
+                <div class="card">
+                    <h3>Currently Learning</h3>
+                    <p>Java, HTML, CSS & JS</p>
+                </div>
+                <div class="card">
+                    <h3>Detail-Oriented</h3>
+                    <p>Clean & Neat Work</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===================== SKILLS ===================== -->
+        <section id="skills">
+            <h2>Skills &amp; Expertise</h2>
+
+            <div class="filter-buttons">
+                <button class="filter-btn active" data-filter="all">All Skills</button>
+                <button class="filter-btn" data-filter="dev">Development</button>
+                <button class="filter-btn" data-filter="design">Design &amp; Media</button>
+                <button class="filter-btn" data-filter="manage">Management</button>
+            </div>
+
+            <div class="card-grid three">
+                <div class="card skill-card" data-category="design">
+                    <h3>UI/UX Design</h3>
+                    <p>Planning simple and friendly layouts.</p>
+                </div>
+                <div class="card skill-card" data-category="dev">
+                    <h3>Web Design / Front-end</h3>
+                    <p>Building pages with HTML, CSS, and JS.</p>
+                </div>
+                <div class="card skill-card" data-category="design">
+                    <h3>Graphic Design</h3>
+                    <p>Layouts, event posters, and graphics.</p>
+                </div>
+                <div class="card skill-card" data-category="manage">
+                    <h3>Project Management</h3>
+                    <p>Organizing group tasks and deadlines.</p>
+                </div>
+                <div class="card skill-card" data-category="dev">
+                    <h3>Java Programming</h3>
+                    <p>Writing console programs in Java.</p>
+                </div>
+                <div class="card skill-card" data-category="manage">
+                    <h3>Teamwork</h3>
+                    <p>Working well with classmates on projects.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===================== EXPERIENCE ===================== -->
+        <section id="experience">
+            <h2>Experience &amp; Projects</h2>
+
+            <div class="timeline">
+                <div class="timeline-item">
+                    <span class="date">2026</span>
+                    <h3>Web Integration Lab</h3>
+                    <p>Built this e-portfolio by linking HTML, CSS, and JavaScript.</p>
+                </div>
+                <div class="timeline-item">
+                    <span class="date">2026</span>
+                    <h3>Barks and Brews Cafe</h3>
+                    <p>A Java CLI management application designed to automate daily operations, inventory management, point-of-sale transactions, and customer loyalty tracking for a dog-friendly cafe. </p>
+                </div>
+                <div class="timeline-item">
+                    <span class="date">Coming Soon</span>
+                    <h3>More Projects on the Way... </h3>
+                    <p>I'm always learning and building new things. Stay tuned for more projects!</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===================== EDUCATION ===================== -->
+        <section id="education">
+            <h2>Education &amp; Honors</h2>
+
+            <div class="card-grid two">
+                <div class="card">
+                    <h3>University of the Immaculate Conception</h3>
+                    <p>BS Computer Science</p>
+                    <p class="date">2025 – Present</p>
+                </div>
+                <div class="card">
+                    <h3>Brokenshire College of Toril</h3>
+                    <p>STEM Strand</p>
+                    <p class="date">2023 – 2025</p>
+                </div>
+            </div>
+
+            <h3 class="sub-title">Recognition</h3>
+            <ul class="honors">
+                <li>🎨 GDG (Google Developers Group) Graphic Designer</li>
+                <li>🏆 With Honors</li>
+                <li>⭐ 1st Runner Up: VEX IQ Expert Category - 19th International Robothon 2024</li>
+            </ul>
+        </section>
+
+        <!-- ===================== CONTACT ===================== -->
+        <section id="contact">
+            <h2>Contact Me</h2>
+            <p class="section-text">Click any card to copy the information.</p>
+
+                <div class="card-grid three">
+                <div class="card contact-card" data-copy="yourname@gmail.com">
+                    <h3>💌 Email</h3>
+                    <p>nkasugai_250000000278@gmail.com</p>
+            </div>
+                 <div class="card contact-card" data-copy="https://github.com/ni-yuki">
+                    <h3>🍓 GitHub</h3>
+                    <p>github.com/ni-yuki</p>
+            </div>
+                <div class="card contact-card" data-copy="Your City, Philippines">
+                    <h3>📍 Address</h3>
+                    <p>Davao City, 8000</p>
+                </div>
+            </div>
+
+            <button id="contact-btn" class="btn">Send Message</button>
+        </section>
+
+    </main>
+
+    <div id="toast">Copied to clipboard!</div>
+
+    <!-- ===================== FOOTER ===================== -->
+    <footer>
+        <p>&copy; <span id="year"></span> Nickey Juzmine Kasugai. All Rights Reserved.</p>
+    </footer>
+
+</body>
+</html>
